@@ -1,0 +1,163 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, monospace;
+  background-color: #6b6b4f; 
+}
+
+body,
+.snake {
+  background-color: #f7f79e; 
+}
+
+#game-board {
+  border-radius: 100px;
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+  margin: 5px;
+  background-color: #F5FFFA; 
+}
+
+.game-border-1 {
+  border: #003366 solid 10px; 
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 10px #003366; 
+}
+
+.game-border-2 {
+  border: #C8102E solid 8px; 
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 10px #C8102E; 
+}
+
+.game-border-3 {
+  border: #C8102E solid 30px; 
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 5px #C8102E; 
+}
+
+#instruction-text {
+  position: absolute;
+  top: 62%;
+  color: #333333; 
+  width: 300px;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 30px;
+  margin: 0;
+ 
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+  color: #333333; 
+}
+
+#score {
+  color: #C8102E;
+}
+
+#score,
+#highScore {
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+#highScore {
+  color: #C8102E; 
+  display: none;
+}
+
+.game-border-3,
+#logo {
+  background-color: #F5FFFA; 
+}
+
+.snake {
+  border: #003366 1px dotted; 
+}
+
+.food {
+  background-color: #F5FFFA; 
+  border: #F08080 5px solid; 
+}
+
+#logo {
+  position: absolute;
+}
+
+.arrowpress {
+  display: flex;
+  gap: 80px;
+}
+
+.arrows {
+  color: #F5FFFA; 
+  background-color: #C8102E; 
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 900;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  height: 70px;
+  width: 70px;
+}
+
+@media (max-width: 800px) {
+  .everything {
+    transform: scale(0.7);
+  }
+
+  h1 {
+    font-size: medium;
+    top: 20px;
+  }
+
+  .scores {
+    position: relative;
+    gap: -15px;
+  }
+
+  .game-border-1 {
+    border: #003366 solid 10px; 
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 10px #003366; 
+  }
+
+  .arrowpress {
+    position: relative;
+    top: 100px;
+  }
+
+  .upkey {
+    position: relative;
+    left: 240px;
+    bottom: 100px;
+    border: 10px solid #003366; 
+  }
+
+  .downkey {
+    position: relative;
+    right: 60px;
+    border: 10px solid #003366; 
+    bottom: 20px;
+  }
+
+  .rightkey {
+    position: relative;
+    right: 120px;
+    border: 10px solid #003366; 
+    bottom: 20px;
+  }
+
+  .leftkey {
+    border: 10px solid #003366; 
+    position: relative;
+    bottom: 20px;
+  }
+}
