@@ -5,6 +5,7 @@ const logo = document.getElementById('logo');
 const score = document.getElementById('score');
 const highScoreText = document.getElementById('highScore');
 
+const goback=document.querySelector('.goback');
 
 const upButton = document.querySelector('.upkey');
 const downButton = document.querySelector('.downkey');
@@ -232,6 +233,7 @@ function updateInstructionText() {
   if (window.innerWidth < 800) {
     h1.textContent = 'Touch the screen to start the game';
     arrowkeyss.style.display='flex';
+    
   } else {
     h1.textContent = 'Press Space to start the game';
   }
@@ -243,3 +245,5 @@ updateInstructionText();
 
 window.addEventListener('resize', updateInstructionText);
 
+goback.addEventListener('click',()=>{
+  window.location.href='https://game-site-orpin.vercel.app/';});

@@ -96,7 +96,28 @@ body,
   display: flex;
   gap: 80px;
 }
+.goback{
+  /* display: none; */
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  
+  display: flex;
+  width: 250px;
+height: 50px;
+background-color: #C8102E;
+top: 780px;
+border-radius: 10px;
+color: white;
 
+}
+.goback:hover{
+  background-color: #e95f76;
+  cursor: pointer;
+}
+.goback:active{
+  background-color: #2f1f1f;
+}
 .arrows {
   color: #F5FFFA; 
   background-color: #C8102E; 
@@ -159,5 +180,11 @@ body,
     border: 10px solid #003366; 
     position: relative;
     bottom: 20px;
+  }
+  #instruction-text{
+    /* position: relative; */
+    top: 500px;
+    z-index: 1;
+  color:white;
   }
 }
