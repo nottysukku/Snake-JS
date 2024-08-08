@@ -8,18 +8,23 @@ body {
   background-color: #6b6b4f; 
 }
 
-body,
-.snake {
-  background-color: #f7f79e; 
+body {
+  background: linear-gradient(90deg, rgba(36,34,0,1) 8%, rgba(2,0,36,1) 21%, rgba(9,9,121,1) 35%, rgba(152,21,7,1) 50%, rgba(106,76,131,1) 75%, rgba(200,175,47,1) 89%, rgba(0,212,255,1) 100%);
+
+}
+
+.snake{
+  background-color:#000000;
+  border-radius: 10px;
 }
 
 #game-board {
-  border-radius: 100px;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(20, 20px);
   grid-template-rows: repeat(20, 20px);
   margin: 5px;
-  background-color: #F5FFFA; 
+  background-image: linear-gradient(to right top, #ff6060, #ff0047, #ee007f, #4000b8, #2020e5);
 }
 
 .game-border-1 {
@@ -76,11 +81,12 @@ body,
 
 .game-border-3,
 #logo {
-  background-color: #F5FFFA; 
+  background-color: #000000; 
 }
 
 .snake {
   border: #003366 1px dotted; 
+  box-shadow: 0 0 5px 5px #48abe0;
 }
 
 .food {
@@ -127,6 +133,16 @@ color: white;
   font-family: Tahoma, Geneva, Verdana, sans-serif;
   height: 70px;
   width: 70px;
+}
+
+.game-over{
+  
+  position: absolute;
+  display: none;
+  
+  /* display: flex; */
+  width: 350px;
+  height: 50px;
 }
 
 @media (max-width: 800px) {
