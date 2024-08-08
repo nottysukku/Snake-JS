@@ -187,7 +187,7 @@ function checkCollision() {
       
       setTimeout(() => {
         resetGame();
-      }, 3000);
+      }, 1000);
     }
   }
 }
