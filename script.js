@@ -22,6 +22,15 @@ let gameStarted = false;
 let paused = false; // New variable to track pause state
 
 const everythingDiv = document.getElementById('logo');
+const highScoreFromLocalStorage = localStorage.getItem('highScore');
+if (highScoreFromLocalStorage) {
+  			highScore = parseInt(highScoreFromLocalStorage);
+  	highScoreText.textContent = highScore.toString().padStart(3, '0'); // Set high score text on load
+  	highScoreText.style.display = 'block';
+	} else {
+  	highScoreText.style.display = 'none'; // Hide if there's no high score
+  	}
+
 
 function draw() {
   board.innerHTML = '';
@@ -222,6 +231,7 @@ function updateHighScore() {
   if (currentScore > highScore) {
     highScore = currentScore;
     highScoreText.textContent = highScore.toString().padStart(3, '0');
+    localStorage.setItem('highScore', highScore);
   }
   highScoreText.style.display = 'block';
 }
