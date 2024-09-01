@@ -11,6 +11,13 @@ const downButton = document.querySelector('.downkey');
 const leftButton = document.querySelector('.leftkey');
 const rightButton = document.querySelector('.rightkey');
 
+
+const bgmusic = new Audio('https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3');
+bgmusic.volume = 0.4;
+const point = new Audio ('https://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/pause.wav');
+
+const explosion = new Audio ('smb_gameover.wav');
+explosion.loop = false;
 const gridSize = 20;
 let snake = [{ x: 10, y: 10 }];
 let food = generateFood();
@@ -99,6 +106,7 @@ function move() {
 
   if (head.x === food.x && head.y === food.y) {
     food = generateFood();
+    point.play();
     increaseSpeed();
     clearInterval(gameInterval); 
     gameInterval = setInterval(() => {
@@ -114,7 +122,7 @@ function move() {
 function startGame() {
   if (!gameStarted) {
     gameStarted = true;
-    
+    bgmusic.play();
     instructionText.style.display = 'none';
     logo.style.display = 'none';
     gameInterval = setInterval(() => {
@@ -192,6 +200,8 @@ function checkCollision() {
     if (head.x === snake[i].x && head.y === snake[i].y) {
       // Pause the game
       paused = true;
+      bgmusic.pause();
+ explosion.play();
       document.querySelector('.game-over').style.display = 'block';
       
       setTimeout(() => {
