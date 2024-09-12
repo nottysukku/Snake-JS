@@ -13,7 +13,7 @@ const rightButton = document.querySelector('.rightkey');
 
 
 const bgmusic = new Audio('https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3');
-bgmusic.volume = 0.4;
+bgmusic.volume = 0.0;
 const point = new Audio ('https://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/pause.wav');
 
 const explosion = new Audio ('smb_gameover.wav');
