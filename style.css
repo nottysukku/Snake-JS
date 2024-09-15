@@ -15,8 +15,10 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(17,98,226,1) 51%, rgb
 }
 
 .snake{
-  background-color:#000000;
-  border-radius: 10px;
+background-color: #0b4841;
+  
+  border-radius: 4px;
+
 }
 
 #game-board {
@@ -25,7 +27,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(17,98,226,1) 51%, rgb
   grid-template-columns: repeat(20, 20px);
   grid-template-rows: repeat(20, 20px);
   margin: 5px;
-  background-image: linear-gradient(to right top,  red, pink,blue);
+  background-color:#6b6b4f;
 }
 
 .game-border-1 {
@@ -49,7 +51,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(17,98,226,1) 51%, rgb
 #instruction-text {
   position: absolute;
   top: 62%;
-  color: #333333; 
+  color: #fff0f0; 
   width: 300px;
   text-align: center;
   text-transform: capitalize;
@@ -87,13 +89,13 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(17,98,226,1) 51%, rgb
 }
 
 .snake {
-  border: #003366 1px dotted; 
-  box-shadow: 0 0 5px 5px #ffffff;
+  border: #ffffff 1px solid; 
+  
 }
 
 .food {
-  background-color: #F5FFFA; 
-  border: #F08080 5px solid; 
+  background-color: #fff1f1; 
+  border: #000000 5px solid; 
 }
 
 #logo {

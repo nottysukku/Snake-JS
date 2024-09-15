@@ -50,8 +50,8 @@ function drawSnake() {
   snake.forEach((segment) => {
     const snakeElement = createGameElement('div', 'snake');
     setPosition(snakeElement, segment);
-    snakeElement.style.backgroundColor = getRandomColor();
     board.appendChild(snakeElement);
+   
   });
 }
 
@@ -107,6 +107,8 @@ function move() {
   if (head.x === food.x && head.y === food.y) {
     food = generateFood();
     point.play();
+    
+    
     increaseSpeed();
     clearInterval(gameInterval); 
     gameInterval = setInterval(() => {
@@ -267,12 +269,4 @@ goback.addEventListener('click', () => {
   window.location.href = 'https://game-site-orpin.vercel.app/';
 });
 
-function getRandomColor() {
-  if (paused) return;
-  const letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
+
